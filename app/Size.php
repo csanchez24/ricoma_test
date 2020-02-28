@@ -9,4 +9,8 @@ class Size extends Model
     protected $table = 'size';
     public $timestamps = false;
 
+    public function products(){
+        return $this->hasMany('App\Product');
+    }
+
 }

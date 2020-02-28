@@ -14,15 +14,15 @@ class SizeTableSeeder extends Seeder
         DB::table('size')->delete();
         DB::table('size')->insert([
             'id' => '1',
-            'name' => 'SMALL'
+            'name' => 'Small'
         ]);
         DB::table('size')->insert([
             'id' => '2',
-            'name' => 'MEDIUM'
+            'name' => 'Medium'
         ]);
         DB::table('size')->insert([
             'id' => '3',
-            'name' => 'LARGE'
+            'name' => 'Large'
         ]);
     }
 }

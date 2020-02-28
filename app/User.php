@@ -30,4 +30,8 @@ class User extends Authenticatable
         'password', 
     ];
 
+    public function inventories(){
+        return $this->hasMany('App\Inventory');
+    }
+
 }

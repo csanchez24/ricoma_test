@@ -9,13 +9,13 @@ $factory->define(Inventory::class, function (Faker $faker) {
     return [
         //
         'user_id' => function () {
-            return factory(App\User::class)->create()->id;
+            return App\User::inRandomOrder()->first()->id;
         },
         'color_id' => function () {
-            return factory(App\Color::class)->create()->id;
+            return App\Color::inRandomOrder()->first()->id;
         },
         'product_id' => function () {
-            return factory(App\Product::class)->create()->id;
+            return App\Product::inRandomOrder()->first()->id;
         },
         'size_id' => $faker->randomElement(['1' ,'2','3']),
         'quantity' => $faker->randomDigit,
